@@ -1,0 +1,297 @@
+[
+  {
+    "NAME": "Accept",
+    "VALUE": 0
+  },
+  {
+    "NAME": "Accept-Charset",
+    "VERSION": "1.1",
+    "VALUE": 1
+  },
+  {
+    "NAME": "Accept-Encoding",
+    "VERSION": "1.1",
+    "VALUE": 2
+  },
+  {
+    "NAME": "Accept-Language",
+    "VALUE": 3
+  },
+  {
+    "NAME": "Accept-Ranges",
+    "VALUE": 4
+  },
+  {
+    "NAME": "Age",
+    "VALUE": 5
+  },
+  {
+    "NAME": "Allow",
+    "VALUE": 6
+  },
+  {
+    "NAME": "Authorization",
+    "VALUE": 7
+  },
+  {
+    "NAME": "Cache-Control",
+    "VERSION": "1.1",
+    "VALUE": 8
+  },
+  {
+    "NAME": "Connection",
+    "VALUE": 9
+  },
+  {
+    "NAME": "Content-Base",
+    "VERSION": "1.1",
+    "VALUE": 10
+  },
+  {
+    "NAME": "Content-Encoding",
+    "VALUE": 11
+  },
+  {
+    "NAME": "Content-Language",
+    "VALUE": 12
+  },
+  {
+    "NAME": "Content-Length",
+    "VALUE": 13
+  },
+  {
+    "NAME": "Content-Location",
+    "VALUE": 14
+  },
+  {
+    "NAME": "Content-MD5",
+    "VALUE": 15
+  },
+  {
+    "NAME": "Content-Range",
+    "VERSION": "1.1",
+    "VALUE": 16
+  },
+  {
+    "NAME": "Content-Type",
+    "VALUE": 17
+  },
+  {
+    "NAME": "Date",
+    "VALUE": 18
+  },
+  {
+    "NAME": "Etag",
+    "VALUE": 19
+  },
+  {
+    "NAME": "Expires",
+    "VALUE": 20
+  },
+  {
+    "NAME": "From",
+    "VALUE": 21
+  },
+  {
+    "NAME": "Host",
+    "VALUE": 22
+  },
+  {
+    "NAME": "If-Modified-Since",
+    "VALUE": 23
+  },
+  {
+    "NAME": "If-Match",
+    "VALUE": 24
+  },
+  {
+    "NAME": "If-None-Match",
+    "VALUE": 25
+  },
+  {
+    "NAME": "If-Range",
+    "VALUE": 26
+  },
+  {
+    "NAME": "If-Unmodified-Since",
+    "VALUE": 27
+  },
+  {
+    "NAME": "Location",
+    "VALUE": 28
+  },
+  {
+    "NAME": "Last-Modified",
+    "VALUE": 29
+  },
+  {
+    "NAME": "Max-Forwards",
+    "VALUE": 30
+  },
+  {
+    "NAME": "Pragma",
+    "VALUE": 31
+  },
+  {
+    "NAME": "Proxy-Authenticate",
+    "VALUE": 32
+  },
+  {
+    "NAME": "Proxy-Authorization",
+    "VALUE": 33
+  },
+  {
+    "NAME": "Public",
+    "VALUE": 34
+  },
+  {
+    "NAME": "Range",
+    "VALUE": 35
+  },
+  {
+    "NAME": "Referer",
+    "VALUE": 36
+  },
+  {
+    "NAME": "Retry-After",
+    "VALUE": 37
+  },
+  {
+    "NAME": "Server",
+    "VALUE": 38
+  },
+  {
+    "NAME": "Transfer-Encoding",
+    "VALUE": 39
+  },
+  {
+    "NAME": "Upgrade",
+    "VALUE": 40
+  },
+  {
+    "NAME": "User-Agent",
+    "VALUE": 41
+  },
+  {
+    "NAME": "Vary",
+    "VALUE": 42
+  },
+  {
+    "NAME": "Via",
+    "VALUE": 43
+  },
+  {
+    "NAME": "Warning",
+    "VALUE": 44
+  },
+  {
+    "NAME": "WWW-Authenticate",
+    "VALUE": 45
+  },
+  {
+    "NAME": "Content-Disposition",
+    "VERSION": "1.1",
+    "VALUE": 46
+  },
+  {
+    "NAME": "X-Wap-Application-Id",
+    "VALUE": 47
+  },
+  {
+    "NAME": "X-Wap-Content-URI",
+    "VALUE": 48
+  },
+  {
+    "NAME": "X-Wap-Initiator-URI",
+    "VALUE": 49
+  },
+  {
+    "NAME": "Accept-Application",
+    "VALUE": 50
+  },
+  {
+    "NAME": "Bearer-Indication",
+    "VALUE": 51
+  },
+  {
+    "NAME": "Push-Flag",
+    "VALUE": 52
+  },
+  {
+    "NAME": "Profile",
+    "VALUE": 53
+  },
+  {
+    "NAME": "Profile-Diff",
+    "VALUE": 54
+  },
+  {
+    "NAME": "Profile-Warning",
+    "VERSION": "1.2",
+    "VALUE": 55
+  },
+  {
+    "NAME": "Expect",
+    "VALUE": 56
+  },
+  {
+    "NAME": "TE",
+    "VALUE": 57
+  },
+  {
+    "NAME": "Trailer",
+    "VALUE": 58
+  },
+  {
+    "NAME": "Accept-Charset",
+    "VALUE": 59
+  },
+  {
+    "NAME": "Accept-Encoding",
+    "VALUE": 60
+  },
+  {
+    "NAME": "Cache-Control",
+    "VALUE": 61
+  },
+  {
+    "NAME": "Content-Range",
+    "VALUE": 62
+  },
+  {
+    "NAME": "X-Wap-Tod",
+    "VALUE": 63
+  },
+  {
+    "NAME": "Content-ID",
+    "VALUE": 64
+  },
+  {
+    "NAME": "Set-Cookie",
+    "VALUE": 65
+  },
+  {
+    "NAME": "Cookie",
+    "VALUE": 66
+  },
+  {
+    "NAME": "Encoding-Version",
+    "VALUE": 67
+  },
+  {
+    "NAME": "Profile-Warning",
+    "VALUE": 68
+  },
+  {
+    "NAME": "Content-Disposition",
+    "VALUE": 69
+  },
+  {
+    "NAME": "X-WAP-Security",
+    "VALUE": 70
+  },
+  {
+    "NAME": "Cache-Control",
+    "VALUE": 71
+  }
+]

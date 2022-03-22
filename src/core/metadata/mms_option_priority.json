@@ -1,0 +1,14 @@
+[
+  {
+    "NAME": "Low",
+    "VALUE": 128
+  },
+  {
+    "NAME": "Normal",
+    "VALUE": 129
+  },
+  {
+    "NAME": "High",
+    "VALUE": 130
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "NAME": "M-Send-Req",
+    "VALUE": 128
+  },
+  {
+    "NAME": "M-Send-Conf",
+    "VALUE": 129
+  },
+  {
+    "NAME": "M-Notification-Ind",
+    "VALUE": 130
+  },
+  {
+    "NAME": "M-Notifyresp-Ind",
+    "VALUE": 131
+  },
+  {
+    "NAME": "M-Retrieve-Conf",
+    "VALUE": 132
+  },
+  {
+    "NAME": "M-Acknowledge-Ind",
+    "VALUE": 133
+  },
+  {
+    "NAME": "M-Delivery-Ind",
+    "VALUE": 134
+  }
+]

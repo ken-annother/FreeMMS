@@ -1,0 +1,18 @@
+[
+  {
+    "NAME": "Personal",
+    "VALUE": 128
+  },
+  {
+    "NAME": "Advertisement",
+    "VALUE": 129
+  },
+  {
+    "NAME": "Informational",
+    "VALUE": 130
+  },
+  {
+    "NAME": "Auto",
+    "VALUE": 131
+  }
+]

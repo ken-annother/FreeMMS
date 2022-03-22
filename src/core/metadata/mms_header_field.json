@@ -1,0 +1,98 @@
+[
+  {
+    "NAME": "Bcc",
+    "VALUE": 1
+  },
+  {
+    "NAME": "Cc",
+    "VALUE": 2
+  },
+  {
+    "NAME": "Content-Location",
+    "VALUE": 3
+  },
+  {
+    "NAME": "Content-Type",
+    "VALUE": 4
+  },
+  {
+    "NAME": "Date",
+    "VALUE": 5
+  },
+  {
+    "NAME": "Delivery-Report",
+    "VALUE": 6
+  },
+  {
+    "NAME": "Delivery-Time",
+    "VALUE": 7
+  },
+  {
+    "NAME": "Expiry",
+    "VALUE": 8
+  },
+  {
+    "NAME": "From",
+    "VALUE": 9
+  },
+  {
+    "NAME": "Message-Class",
+    "VALUE": 10
+  },
+  {
+    "NAME": "Message-ID",
+    "VALUE": 11
+  },
+  {
+    "NAME": "Message-Type",
+    "VALUE": 12
+  },
+  {
+    "NAME": "MMS-Version",
+    "VALUE": 13
+  },
+  {
+    "NAME": "Message-Size",
+    "VALUE": 14
+  },
+  {
+    "NAME": "Priority",
+    "VALUE": 15
+  },
+  {
+    "NAME": "Read-Reply",
+    "VALUE": 16
+  },
+  {
+    "NAME": "Report-Allowed",
+    "VALUE": 17
+  },
+  {
+    "NAME": "Response-Status",
+    "VALUE": 18
+  },
+  {
+    "NAME": "Response-Text",
+    "VALUE": 19
+  },
+  {
+    "NAME": "Sender-Visibility",
+    "VALUE": 20
+  },
+  {
+    "NAME": "Status",
+    "VALUE": 21
+  },
+  {
+    "NAME": "Subject",
+    "VALUE": 22
+  },
+  {
+    "NAME": "To",
+    "VALUE": 23
+  },
+  {
+    "NAME": "Transaction-Id",
+    "VALUE": 24
+  }
+]

@@ -1,0 +1,358 @@
+[
+  {
+    "NAME": "*/*",
+    "VALUE": 0
+  },
+  {
+    "NAME": "text/*",
+    "VALUE": 1
+  },
+  {
+    "NAME": "text/html",
+    "VALUE": 2
+  },
+  {
+    "NAME": "text/plain",
+    "VALUE": 3
+  },
+  {
+    "NAME": "text/x-hdml",
+    "VALUE": 4
+  },
+  {
+    "NAME": "text/x-ttml",
+    "VALUE": 5
+  },
+  {
+    "NAME": "text/x-vCalendar",
+    "VALUE": 6
+  },
+  {
+    "NAME": "text/x-vCard",
+    "VALUE": 7
+  },
+  {
+    "NAME": "text/vnd.wap.wml",
+    "VALUE": 8
+  },
+  {
+    "NAME": "text/vnd.wap.wmlscript",
+    "VALUE": 9
+  },
+  {
+    "NAME": "text/vnd.wap.wta-event",
+    "VALUE": 10
+  },
+  {
+    "NAME": "multipart/mixed",
+    "VALUE": 12
+  },
+  {
+    "NAME": "multipart/form-data",
+    "VALUE": 13
+  },
+  {
+    "NAME": "multipart/byterantes",
+    "VALUE": 14
+  },
+  {
+    "NAME": "multipart/alternative",
+    "VALUE": 15
+  },
+  {
+    "NAME": "application/*",
+    "VALUE": 16
+  },
+  {
+    "NAME": "application/java-vm",
+    "VALUE": 17
+  },
+  {
+    "NAME": "application/x-www-form-urlencoded",
+    "VALUE": 18
+  },
+  {
+    "NAME": "application/x-hdmlc",
+    "VALUE": 19
+  },
+  {
+    "NAME": "application/vnd.wap.wmlc",
+    "VALUE": 20
+  },
+  {
+    "NAME": "application/vnd.wap.wmlscriptc",
+    "VALUE": 21
+  },
+  {
+    "NAME": "application/vnd.wap.wta-eventc",
+    "VALUE": 22
+  },
+  {
+    "NAME": "application/vnd.wap.uaprof",
+    "VALUE": 23
+  },
+  {
+    "NAME": "application/vnd.wap.wtls-ca-certificate",
+    "VALUE": 24
+  },
+  {
+    "NAME": "application/vnd.wap.wtls-user-certificate",
+    "VALUE": 25
+  },
+  {
+    "NAME": "application/x-x509-ca-cert",
+    "VALUE": 26
+  },
+  {
+    "NAME": "application/x-x509-user-cert",
+    "VALUE": 27
+  },
+  {
+    "NAME": "image/*",
+    "VALUE": 28
+  },
+  {
+    "NAME": "image/gif",
+    "VALUE": 29
+  },
+  {
+    "NAME": "image/jpeg",
+    "VALUE": 30
+  },
+  {
+    "NAME": "image/tiff",
+    "VALUE": 31
+  },
+  {
+    "NAME": "image/png",
+    "VALUE": 32
+  },
+  {
+    "NAME": "image/vnd.wap.wbmp",
+    "VALUE": 33
+  },
+  {
+    "NAME": "application/vnd.wap.multipart.*",
+    "VALUE": 34
+  },
+  {
+    "NAME": "application/vnd.wap.multipart.mixed",
+    "VALUE": 35
+  },
+  {
+    "NAME": "application/vnd.wap.multipart.form-data",
+    "VALUE": 36
+  },
+  {
+    "NAME": "application/vnd.wap.multipart.byteranges",
+    "VALUE": 37
+  },
+  {
+    "NAME": "application/vnd.wap.multipart.alternative",
+    "VALUE": 38
+  },
+  {
+    "NAME": "application/xml",
+    "VALUE": 39
+  },
+  {
+    "NAME": "text/xml",
+    "VALUE": 40
+  },
+  {
+    "NAME": "application/vnd.wap.wbxml",
+    "VALUE": 41
+  },
+  {
+    "NAME": "application/x-x968-cross-cert",
+    "VALUE": 42
+  },
+  {
+    "NAME": "application/x-x968-ca-cert",
+    "VALUE": 43
+  },
+  {
+    "NAME": "application/x-x968-user-cert",
+    "VALUE": 44
+  },
+  {
+    "NAME": "text/vnd.wap.si",
+    "VALUE": 45
+  },
+  {
+    "NAME": "application/vnd.wap.sic",
+    "VALUE": 46
+  },
+  {
+    "NAME": "text/vnd.wap.sl",
+    "VALUE": 47
+  },
+  {
+    "NAME": "application/vnd.wap.slc",
+    "VALUE": 48
+  },
+  {
+    "NAME": "text/vnd.wap.co",
+    "VALUE": 49
+  },
+  {
+    "NAME": "application/vnd.wap.coc",
+    "VALUE": 50
+  },
+  {
+    "NAME": "application/vnd.wap.multipart.related",
+    "VALUE": 51
+  },
+  {
+    "NAME": "application/vnd.wap.sia",
+    "VALUE": 52
+  },
+  {
+    "NAME": "text/vnd.wap.connectivity-xml",
+    "VALUE": 53
+  },
+  {
+    "NAME": "application/vnd.wap.connectivity-wbxml",
+    "VALUE": 54
+  },
+  {
+    "NAME": "application/pkcs7-mime",
+    "VALUE": 55
+  },
+  {
+    "NAME": "application/vnd.wap.hashed-certificate",
+    "VALUE": 56
+  },
+  {
+    "NAME": "application/vnd.wap.cert-response",
+    "VALUE": 58
+  },
+  {
+    "NAME": "application/xhtml+xml",
+    "VALUE": 59
+  },
+  {
+    "NAME": "application/wml+xml",
+    "VALUE": 60
+  },
+  {
+    "NAME": "text/css",
+    "VALUE": 61
+  },
+  {
+    "NAME": "application/vnd.wap.mms-message",
+    "VALUE": 62
+  },
+  {
+    "NAME": "application/vnd.wap.rollover-certificate",
+    "VALUE": 63
+  },
+  {
+    "NAME": "application/vnd.wap.locc+wbxml",
+    "VALUE": 64
+  },
+  {
+    "NAME": "application/vnd.wap.loc+xml",
+    "VALUE": 65
+  },
+  {
+    "NAME": "application/vnd.syncml.dm+wbxml",
+    "VALUE": 66
+  },
+  {
+    "NAME": "application/vnd.syncml.dm+xml",
+    "VALUE": 67
+  },
+  {
+    "NAME": "application/vnd.syncml.notification",
+    "VALUE": 68
+  },
+  {
+    "NAME": "application/vnd.wap.xhtml+xml",
+    "VALUE": 69
+  },
+  {
+    "NAME": "application/vnd.wv.csp.cir",
+    "VALUE": 70
+  },
+  {
+    "NAME": "application/vnd.oma.dd+xml",
+    "VALUE": 71
+  },
+  {
+    "NAME": "application/vnd.oma.drm.message",
+    "VALUE": 72
+  },
+  {
+    "NAME": "application/vnd.oma.drm.content",
+    "VALUE": 73
+  },
+  {
+    "NAME": "application/vnd.oma.drm.rights+xml",
+    "VALUE": 74
+  },
+  {
+    "NAME": "application/vnd.oma.drm.rights+wbxml",
+    "VALUE": 75
+  },
+  {
+    "NAME": "application/vnd.wv.csp+xml",
+    "VALUE": 76
+  },
+  {
+    "NAME": "application/vnd.wv.csp+wbxml",
+    "VALUE": 77
+  },
+  {
+    "NAME": "application/vnd.syncml.ds.notification",
+    "VALUE": 78
+  },
+  {
+    "NAME": "audio/*",
+    "VALUE": 79
+  },
+  {
+    "NAME": "video/*",
+    "VALUE": 80
+  },
+  {
+    "NAME": "application/vnd.oma.dd2+xml",
+    "VALUE": 81
+  },
+  {
+    "NAME": "application/mikey",
+    "VALUE": 82
+  },
+  {
+    "NAME": "application/vnd.oma.dcd",
+    "VALUE": 83
+  },
+  {
+    "NAME": "application/vnd.oma.dcdc",
+    "VALUE": 84
+  },
+  {
+    "NAME": "text/x-vMessage",
+    "VALUE": 85
+  },
+  {
+    "NAME": "application/vnd.omads-email+wbxml",
+    "VALUE": 86
+  },
+  {
+    "NAME": "text/x-vBookmark",
+    "VALUE": 87
+  },
+  {
+    "NAME": "application/vnd.syncml.dm.notification",
+    "VALUE": 88
+  },
+  {
+    "NAME": "application/octet-stream",
+    "VALUE": 90
+  },
+  {
+    "NAME": "application/json",
+    "VALUE": 91
+  }
+]

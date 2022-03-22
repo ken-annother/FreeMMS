@@ -1,0 +1,1034 @@
+[
+  {
+    "NAME": "US-ASCII",
+    "VALUE": 3
+  },
+  {
+    "NAME": "ISO_8859-1:1987",
+    "VALUE": 4
+  },
+  {
+    "NAME": "ISO_8859-2:1987",
+    "VALUE": 5
+  },
+  {
+    "NAME": "ISO_8859-3:1988",
+    "VALUE": 6
+  },
+  {
+    "NAME": "ISO_8859-4:1988",
+    "VALUE": 7
+  },
+  {
+    "NAME": "ISO_8859-5:1988",
+    "VALUE": 8
+  },
+  {
+    "NAME": "ISO_8859-6:1987",
+    "VALUE": 9
+  },
+  {
+    "NAME": "ISO_8859-7:1987",
+    "VALUE": 10
+  },
+  {
+    "NAME": "ISO_8859-8:1988",
+    "VALUE": 11
+  },
+  {
+    "NAME": "ISO_8859-9:1989",
+    "VALUE": 12
+  },
+  {
+    "NAME": "ISO-8859-10",
+    "VALUE": 13
+  },
+  {
+    "NAME": "ISO_6937-2-add",
+    "VALUE": 14
+  },
+  {
+    "NAME": "JIS_X0201",
+    "VALUE": 15
+  },
+  {
+    "NAME": "JIS_Encoding",
+    "VALUE": 16
+  },
+  {
+    "NAME": "Shift_JIS",
+    "VALUE": 17
+  },
+  {
+    "NAME": "Extended_UNIX_Code_Packed_Format_for_Japanese",
+    "VALUE": 18
+  },
+  {
+    "NAME": "Extended_UNIX_Code_Fixed_Width_for_Japanese",
+    "VALUE": 19
+  },
+  {
+    "NAME": "BS_4730",
+    "VALUE": 20
+  },
+  {
+    "NAME": "SEN_850200_C",
+    "VALUE": 21
+  },
+  {
+    "NAME": "IT",
+    "VALUE": 22
+  },
+  {
+    "NAME": "ES",
+    "VALUE": 23
+  },
+  {
+    "NAME": "DIN_66003",
+    "VALUE": 24
+  },
+  {
+    "NAME": "NS_4551-1",
+    "VALUE": 25
+  },
+  {
+    "NAME": "NF_Z_62-010",
+    "VALUE": 26
+  },
+  {
+    "NAME": "ISO-10646-UTF-1",
+    "VALUE": 27
+  },
+  {
+    "NAME": "ISO_646.basic:1983",
+    "VALUE": 28
+  },
+  {
+    "NAME": "INVARIANT",
+    "VALUE": 29
+  },
+  {
+    "NAME": "ISO_646.irv:1983",
+    "VALUE": 30
+  },
+  {
+    "NAME": "NATS-SEFI",
+    "VALUE": 31
+  },
+  {
+    "NAME": "NATS-SEFI-ADD",
+    "VALUE": 32
+  },
+  {
+    "NAME": "NATS-DANO",
+    "VALUE": 33
+  },
+  {
+    "NAME": "NATS-DANO-ADD",
+    "VALUE": 34
+  },
+  {
+    "NAME": "SEN_850200_B",
+    "VALUE": 35
+  },
+  {
+    "NAME": "KS_C_5601-1987",
+    "VALUE": 36
+  },
+  {
+    "NAME": "ISO-2022-KR",
+    "VALUE": 37
+  },
+  {
+    "NAME": "EUC-KR",
+    "VALUE": 38
+  },
+  {
+    "NAME": "ISO-2022-JP",
+    "VALUE": 39
+  },
+  {
+    "NAME": "ISO-2022-JP-2",
+    "VALUE": 40
+  },
+  {
+    "NAME": "JIS_C6220-1969-jp",
+    "VALUE": 41
+  },
+  {
+    "NAME": "JIS_C6220-1969-ro",
+    "VALUE": 42
+  },
+  {
+    "NAME": "PT",
+    "VALUE": 43
+  },
+  {
+    "NAME": "greek7-old",
+    "VALUE": 44
+  },
+  {
+    "NAME": "latin-greek",
+    "VALUE": 45
+  },
+  {
+    "NAME": "NF_Z_62-010_(1973)",
+    "VALUE": 46
+  },
+  {
+    "NAME": "Latin-greek-1",
+    "VALUE": 47
+  },
+  {
+    "NAME": "ISO_5427",
+    "VALUE": 48
+  },
+  {
+    "NAME": "JIS_C6226-1978",
+    "VALUE": 49
+  },
+  {
+    "NAME": "BS_viewdata",
+    "VALUE": 50
+  },
+  {
+    "NAME": "INIS",
+    "VALUE": 51
+  },
+  {
+    "NAME": "INIS-8",
+    "VALUE": 52
+  },
+  {
+    "NAME": "INIS-cyrillic",
+    "VALUE": 53
+  },
+  {
+    "NAME": "ISO_5427:1981",
+    "VALUE": 54
+  },
+  {
+    "NAME": "ISO_5428:1980",
+    "VALUE": 55
+  },
+  {
+    "NAME": "GB_1988-80",
+    "VALUE": 56
+  },
+  {
+    "NAME": "GB_2312-80",
+    "VALUE": 57
+  },
+  {
+    "NAME": "NS_4551-2",
+    "VALUE": 58
+  },
+  {
+    "NAME": "videotex-suppl",
+    "VALUE": 59
+  },
+  {
+    "NAME": "PT2",
+    "VALUE": 60
+  },
+  {
+    "NAME": "ES2",
+    "VALUE": 61
+  },
+  {
+    "NAME": "MSZ_7795.3",
+    "VALUE": 62
+  },
+  {
+    "NAME": "JIS_C6226-1983",
+    "VALUE": 63
+  },
+  {
+    "NAME": "greek7",
+    "VALUE": 64
+  },
+  {
+    "NAME": "ASMO_449",
+    "VALUE": 65
+  },
+  {
+    "NAME": "iso-ir-90",
+    "VALUE": 66
+  },
+  {
+    "NAME": "JIS_C6229-1984-a",
+    "VALUE": 67
+  },
+  {
+    "NAME": "JIS_C6229-1984-b",
+    "VALUE": 68
+  },
+  {
+    "NAME": "JIS_C6229-1984-b-add",
+    "VALUE": 69
+  },
+  {
+    "NAME": "JIS_C6229-1984-hand",
+    "VALUE": 70
+  },
+  {
+    "NAME": "JIS_C6229-1984-hand-add",
+    "VALUE": 71
+  },
+  {
+    "NAME": "JIS_C6229-1984-kana",
+    "VALUE": 72
+  },
+  {
+    "NAME": "ISO_2033-1983",
+    "VALUE": 73
+  },
+  {
+    "NAME": "ANSI_X3.110-1983",
+    "VALUE": 74
+  },
+  {
+    "NAME": "T.61-7bit",
+    "VALUE": 75
+  },
+  {
+    "NAME": "T.61-8bit",
+    "VALUE": 76
+  },
+  {
+    "NAME": "ECMA-cyrillic",
+    "VALUE": 77
+  },
+  {
+    "NAME": "CSA_Z243.4-1985-1",
+    "VALUE": 78
+  },
+  {
+    "NAME": "CSA_Z243.4-1985-2",
+    "VALUE": 79
+  },
+  {
+    "NAME": "CSA_Z243.4-1985-gr",
+    "VALUE": 80
+  },
+  {
+    "NAME": "ISO_8859-6-E",
+    "VALUE": 81
+  },
+  {
+    "NAME": "ISO_8859-6-I",
+    "VALUE": 82
+  },
+  {
+    "NAME": "T.101-G2",
+    "VALUE": 83
+  },
+  {
+    "NAME": "ISO_8859-8-E",
+    "VALUE": 84
+  },
+  {
+    "NAME": "ISO_8859-8-I",
+    "VALUE": 85
+  },
+  {
+    "NAME": "CSN_369103",
+    "VALUE": 86
+  },
+  {
+    "NAME": "JUS_I.B1.002",
+    "VALUE": 87
+  },
+  {
+    "NAME": "IEC_P27-1",
+    "VALUE": 88
+  },
+  {
+    "NAME": "JUS_I.B1.003-serb",
+    "VALUE": 89
+  },
+  {
+    "NAME": "JUS_I.B1.003-mac",
+    "VALUE": 90
+  },
+  {
+    "NAME": "greek-ccitt",
+    "VALUE": 91
+  },
+  {
+    "NAME": "NC_NC00-10:81",
+    "VALUE": 92
+  },
+  {
+    "NAME": "ISO_6937-2-25",
+    "VALUE": 93
+  },
+  {
+    "NAME": "GOST_19768-74",
+    "VALUE": 94
+  },
+  {
+    "NAME": "ISO_8859-supp",
+    "VALUE": 95
+  },
+  {
+    "NAME": "ISO_10367-box",
+    "VALUE": 96
+  },
+  {
+    "NAME": "latin-lap",
+    "VALUE": 97
+  },
+  {
+    "NAME": "JIS_X0212-1990",
+    "VALUE": 98
+  },
+  {
+    "NAME": "DS_2089",
+    "VALUE": 99
+  },
+  {
+    "NAME": "us-dk",
+    "VALUE": 100
+  },
+  {
+    "NAME": "dk-us",
+    "VALUE": 101
+  },
+  {
+    "NAME": "KSC5636",
+    "VALUE": 102
+  },
+  {
+    "NAME": "UNICODE-1-1-UTF-7",
+    "VALUE": 103
+  },
+  {
+    "NAME": "ISO-2022-CN",
+    "VALUE": 104
+  },
+  {
+    "NAME": "ISO-2022-CN-EXT",
+    "VALUE": 105
+  },
+  {
+    "NAME": "UTF-8",
+    "VALUE": 106
+  },
+  {
+    "NAME": "ISO-8859-13",
+    "VALUE": 109
+  },
+  {
+    "NAME": "ISO-8859-14",
+    "VALUE": 110
+  },
+  {
+    "NAME": "ISO-8859-15",
+    "VALUE": 111
+  },
+  {
+    "NAME": "ISO-8859-16",
+    "VALUE": 112
+  },
+  {
+    "NAME": "GBK",
+    "VALUE": 113
+  },
+  {
+    "NAME": "GB18030",
+    "VALUE": 114
+  },
+  {
+    "NAME": "OSD_EBCDIC_DF04_15",
+    "VALUE": 115
+  },
+  {
+    "NAME": "OSD_EBCDIC_DF03_IRV",
+    "VALUE": 116
+  },
+  {
+    "NAME": "OSD_EBCDIC_DF04_1",
+    "VALUE": 117
+  },
+  {
+    "NAME": "ISO-11548-1",
+    "VALUE": 118
+  },
+  {
+    "NAME": "KZ-1048",
+    "VALUE": 119
+  },
+  {
+    "NAME": "ISO-10646-UCS-2",
+    "VALUE": 1000
+  },
+  {
+    "NAME": "ISO-10646-UCS-4",
+    "VALUE": 1001
+  },
+  {
+    "NAME": "ISO-10646-UCS-Basic",
+    "VALUE": 1002
+  },
+  {
+    "NAME": "ISO-10646-Unicode-Latin1",
+    "VALUE": 1003
+  },
+  {
+    "NAME": "ISO-10646-J-1",
+    "VALUE": 1004
+  },
+  {
+    "NAME": "ISO-Unicode-IBM-1261",
+    "VALUE": 1005
+  },
+  {
+    "NAME": "ISO-Unicode-IBM-1268",
+    "VALUE": 1006
+  },
+  {
+    "NAME": "ISO-Unicode-IBM-1276",
+    "VALUE": 1007
+  },
+  {
+    "NAME": "ISO-Unicode-IBM-1264",
+    "VALUE": 1008
+  },
+  {
+    "NAME": "ISO-Unicode-IBM-1265",
+    "VALUE": 1009
+  },
+  {
+    "NAME": "UNICODE-1-1",
+    "VALUE": 1010
+  },
+  {
+    "NAME": "SCSU",
+    "VALUE": 1011
+  },
+  {
+    "NAME": "UTF-7",
+    "VALUE": 1012
+  },
+  {
+    "NAME": "UTF-16BE",
+    "VALUE": 1013
+  },
+  {
+    "NAME": "UTF-16LE",
+    "VALUE": 1014
+  },
+  {
+    "NAME": "UTF-16",
+    "VALUE": 1015
+  },
+  {
+    "NAME": "CESU-8",
+    "VALUE": 1016
+  },
+  {
+    "NAME": "UTF-32",
+    "VALUE": 1017
+  },
+  {
+    "NAME": "UTF-32BE",
+    "VALUE": 1018
+  },
+  {
+    "NAME": "UTF-32LE",
+    "VALUE": 1019
+  },
+  {
+    "NAME": "BOCU-1",
+    "VALUE": 1020
+  },
+  {
+    "NAME": "UTF-7-IMAP",
+    "VALUE": 1021
+  },
+  {
+    "NAME": "ISO-8859-1-Windows-3.0-Latin-1",
+    "VALUE": 2000
+  },
+  {
+    "NAME": "ISO-8859-1-Windows-3.1-Latin-1",
+    "VALUE": 2001
+  },
+  {
+    "NAME": "ISO-8859-2-Windows-Latin-2",
+    "VALUE": 2002
+  },
+  {
+    "NAME": "ISO-8859-9-Windows-Latin-5",
+    "VALUE": 2003
+  },
+  {
+    "NAME": "hp-roman8",
+    "VALUE": 2004
+  },
+  {
+    "NAME": "Adobe-Standard-Encoding",
+    "VALUE": 2005
+  },
+  {
+    "NAME": "Ventura-US",
+    "VALUE": 2006
+  },
+  {
+    "NAME": "Ventura-International",
+    "VALUE": 2007
+  },
+  {
+    "NAME": "DEC-MCS",
+    "VALUE": 2008
+  },
+  {
+    "NAME": "IBM850",
+    "VALUE": 2009
+  },
+  {
+    "NAME": "PC8-Danish-Norwegian",
+    "VALUE": 2012
+  },
+  {
+    "NAME": "IBM862",
+    "VALUE": 2013
+  },
+  {
+    "NAME": "PC8-Turkish",
+    "VALUE": 2014
+  },
+  {
+    "NAME": "IBM-Symbols",
+    "VALUE": 2015
+  },
+  {
+    "NAME": "IBM-Thai",
+    "VALUE": 2016
+  },
+  {
+    "NAME": "HP-Legal",
+    "VALUE": 2017
+  },
+  {
+    "NAME": "HP-Pi-font",
+    "VALUE": 2018
+  },
+  {
+    "NAME": "HP-Math8",
+    "VALUE": 2019
+  },
+  {
+    "NAME": "Adobe-Symbol-Encoding",
+    "VALUE": 2020
+  },
+  {
+    "NAME": "HP-DeskTop",
+    "VALUE": 2021
+  },
+  {
+    "NAME": "Ventura-Math",
+    "VALUE": 2022
+  },
+  {
+    "NAME": "Microsoft-Publishing",
+    "VALUE": 2023
+  },
+  {
+    "NAME": "Windows-31J",
+    "VALUE": 2024
+  },
+  {
+    "NAME": "GB2312",
+    "VALUE": 2025
+  },
+  {
+    "NAME": "Big5",
+    "VALUE": 2026
+  },
+  {
+    "NAME": "macintosh",
+    "VALUE": 2027
+  },
+  {
+    "NAME": "IBM037",
+    "VALUE": 2028
+  },
+  {
+    "NAME": "IBM038",
+    "VALUE": 2029
+  },
+  {
+    "NAME": "IBM273",
+    "VALUE": 2030
+  },
+  {
+    "NAME": "IBM274",
+    "VALUE": 2031
+  },
+  {
+    "NAME": "IBM275",
+    "VALUE": 2032
+  },
+  {
+    "NAME": "IBM277",
+    "VALUE": 2033
+  },
+  {
+    "NAME": "IBM278",
+    "VALUE": 2034
+  },
+  {
+    "NAME": "IBM280",
+    "VALUE": 2035
+  },
+  {
+    "NAME": "IBM281",
+    "VALUE": 2036
+  },
+  {
+    "NAME": "IBM284",
+    "VALUE": 2037
+  },
+  {
+    "NAME": "IBM285",
+    "VALUE": 2038
+  },
+  {
+    "NAME": "IBM290",
+    "VALUE": 2039
+  },
+  {
+    "NAME": "IBM297",
+    "VALUE": 2040
+  },
+  {
+    "NAME": "IBM420",
+    "VALUE": 2041
+  },
+  {
+    "NAME": "IBM423",
+    "VALUE": 2042
+  },
+  {
+    "NAME": "IBM424",
+    "VALUE": 2043
+  },
+  {
+    "NAME": "IBM437",
+    "VALUE": 2011
+  },
+  {
+    "NAME": "IBM500",
+    "VALUE": 2044
+  },
+  {
+    "NAME": "IBM851",
+    "VALUE": 2045
+  },
+  {
+    "NAME": "IBM852",
+    "VALUE": 2010
+  },
+  {
+    "NAME": "IBM855",
+    "VALUE": 2046
+  },
+  {
+    "NAME": "IBM857",
+    "VALUE": 2047
+  },
+  {
+    "NAME": "IBM860",
+    "VALUE": 2048
+  },
+  {
+    "NAME": "IBM861",
+    "VALUE": 2049
+  },
+  {
+    "NAME": "IBM863",
+    "VALUE": 2050
+  },
+  {
+    "NAME": "IBM864",
+    "VALUE": 2051
+  },
+  {
+    "NAME": "IBM865",
+    "VALUE": 2052
+  },
+  {
+    "NAME": "IBM868",
+    "VALUE": 2053
+  },
+  {
+    "NAME": "IBM869",
+    "VALUE": 2054
+  },
+  {
+    "NAME": "IBM870",
+    "VALUE": 2055
+  },
+  {
+    "NAME": "IBM871",
+    "VALUE": 2056
+  },
+  {
+    "NAME": "IBM880",
+    "VALUE": 2057
+  },
+  {
+    "NAME": "IBM891",
+    "VALUE": 2058
+  },
+  {
+    "NAME": "IBM903",
+    "VALUE": 2059
+  },
+  {
+    "NAME": "IBM904",
+    "VALUE": 2060
+  },
+  {
+    "NAME": "IBM905",
+    "VALUE": 2061
+  },
+  {
+    "NAME": "IBM918",
+    "VALUE": 2062
+  },
+  {
+    "NAME": "IBM1026",
+    "VALUE": 2063
+  },
+  {
+    "NAME": "EBCDIC-AT-DE",
+    "VALUE": 2064
+  },
+  {
+    "NAME": "EBCDIC-AT-DE-A",
+    "VALUE": 2065
+  },
+  {
+    "NAME": "EBCDIC-CA-FR",
+    "VALUE": 2066
+  },
+  {
+    "NAME": "EBCDIC-DK-NO",
+    "VALUE": 2067
+  },
+  {
+    "NAME": "EBCDIC-DK-NO-A",
+    "VALUE": 2068
+  },
+  {
+    "NAME": "EBCDIC-FI-SE",
+    "VALUE": 2069
+  },
+  {
+    "NAME": "EBCDIC-FI-SE-A",
+    "VALUE": 2070
+  },
+  {
+    "NAME": "EBCDIC-FR",
+    "VALUE": 2071
+  },
+  {
+    "NAME": "EBCDIC-IT",
+    "VALUE": 2072
+  },
+  {
+    "NAME": "EBCDIC-PT",
+    "VALUE": 2073
+  },
+  {
+    "NAME": "EBCDIC-ES",
+    "VALUE": 2074
+  },
+  {
+    "NAME": "EBCDIC-ES-A",
+    "VALUE": 2075
+  },
+  {
+    "NAME": "EBCDIC-ES-S",
+    "VALUE": 2076
+  },
+  {
+    "NAME": "EBCDIC-UK",
+    "VALUE": 2077
+  },
+  {
+    "NAME": "EBCDIC-US",
+    "VALUE": 2078
+  },
+  {
+    "NAME": "UNKNOWN-8BIT",
+    "VALUE": 2079
+  },
+  {
+    "NAME": "MNEMONIC",
+    "VALUE": 2080
+  },
+  {
+    "NAME": "MNEM",
+    "VALUE": 2081
+  },
+  {
+    "NAME": "VISCII",
+    "VALUE": 2082
+  },
+  {
+    "NAME": "VIQR",
+    "VALUE": 2083
+  },
+  {
+    "NAME": "KOI8-R",
+    "VALUE": 2084
+  },
+  {
+    "NAME": "HZ-GB-2312",
+    "VALUE": 2085
+  },
+  {
+    "NAME": "IBM866",
+    "VALUE": 2086
+  },
+  {
+    "NAME": "IBM775",
+    "VALUE": 2087
+  },
+  {
+    "NAME": "KOI8-U",
+    "VALUE": 2088
+  },
+  {
+    "NAME": "IBM00858",
+    "VALUE": 2089
+  },
+  {
+    "NAME": "IBM00924",
+    "VALUE": 2090
+  },
+  {
+    "NAME": "IBM01140",
+    "VALUE": 2091
+  },
+  {
+    "NAME": "IBM01141",
+    "VALUE": 2092
+  },
+  {
+    "NAME": "IBM01142",
+    "VALUE": 2093
+  },
+  {
+    "NAME": "IBM01143",
+    "VALUE": 2094
+  },
+  {
+    "NAME": "IBM01144",
+    "VALUE": 2095
+  },
+  {
+    "NAME": "IBM01145",
+    "VALUE": 2096
+  },
+  {
+    "NAME": "IBM01146",
+    "VALUE": 2097
+  },
+  {
+    "NAME": "IBM01147",
+    "VALUE": 2098
+  },
+  {
+    "NAME": "IBM01148",
+    "VALUE": 2099
+  },
+  {
+    "NAME": "IBM01149",
+    "VALUE": 2100
+  },
+  {
+    "NAME": "Big5-HKSCS",
+    "VALUE": 2101
+  },
+  {
+    "NAME": "IBM1047",
+    "VALUE": 2102
+  },
+  {
+    "NAME": "PTCP154",
+    "VALUE": 2103
+  },
+  {
+    "NAME": "Amiga-1251",
+    "VALUE": 2104
+  },
+  {
+    "NAME": "KOI7-switched",
+    "VALUE": 2105
+  },
+  {
+    "NAME": "BRF",
+    "VALUE": 2106
+  },
+  {
+    "NAME": "TSCII",
+    "VALUE": 2107
+  },
+  {
+    "NAME": "CP51932",
+    "VALUE": 2108
+  },
+  {
+    "NAME": "windows-874",
+    "VALUE": 2109
+  },
+  {
+    "NAME": "windows-1250",
+    "VALUE": 2250
+  },
+  {
+    "NAME": "windows-1251",
+    "VALUE": 2251
+  },
+  {
+    "NAME": "windows-1252",
+    "VALUE": 2252
+  },
+  {
+    "NAME": "windows-1253",
+    "VALUE": 2253
+  },
+  {
+    "NAME": "windows-1254",
+    "VALUE": 2254
+  },
+  {
+    "NAME": "windows-1255",
+    "VALUE": 2255
+  },
+  {
+    "NAME": "windows-1256",
+    "VALUE": 2256
+  },
+  {
+    "NAME": "windows-1257",
+    "VALUE": 2257
+  },
+  {
+    "NAME": "windows-1258",
+    "VALUE": 2258
+  },
+  {
+    "NAME": "TIS-620",
+    "VALUE": 2259
+  },
+  {
+    "NAME": "CP50220",
+    "VALUE": 2260
+  }
+]

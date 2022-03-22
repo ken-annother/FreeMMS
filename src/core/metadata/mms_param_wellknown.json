@@ -1,0 +1,134 @@
+[
+  {
+    "NAME": "Q",
+    "VALUE": 0
+  },
+  {
+    "NAME": "Charset",
+    "VALUE": 1
+  },
+  {
+    "NAME": "Level",
+    "VALUE": 2
+  },
+  {
+    "NAME": "Type",
+    "VERSION": "1.1",
+    "VALUE": 3
+  },
+  {
+    "NAME": "Name",
+    "VERSION": "1.1",
+    "VALUE": 5
+  },
+  {
+    "NAME": "Filename",
+    "VERSION": "1.1",
+    "VALUE": 6
+  },
+  {
+    "NAME": "Differences",
+    "VALUE": 7
+  },
+  {
+    "NAME": "Padding",
+    "VALUE": 8
+  },
+  {
+    "NAME": "Type",
+    "VERSION": "1.2",
+    "VALUE": 9
+  },
+  {
+    "NAME": "Start",
+    "VERSION": "1.2",
+    "VALUE": 10
+  },
+  {
+    "NAME": "Start-Info",
+    "VERSION": "1.2",
+    "VALUE": 11
+  },
+  {
+    "NAME": "Comment",
+    "VERSION": "1.3",
+    "VALUE": 12
+  },
+  {
+    "NAME": "Domain",
+    "VERSION": "1.3",
+    "VALUE": 13
+  },
+  {
+    "NAME": "Max-Age",
+    "VALUE": 14
+  },
+  {
+    "NAME": "Path",
+    "VERSION": "1.3",
+    "VALUE": 15
+  },
+  {
+    "NAME": "Secure",
+    "VALUE": 16
+  },
+  {
+    "NAME": "SEC",
+    "VALUE": 17
+  },
+  {
+    "NAME": "MAC",
+    "VALUE": 18
+  },
+  {
+    "NAME": "Creation-Date",
+    "VALUE": 19
+  },
+  {
+    "NAME": "Modification-Date",
+    "VALUE": 20
+  },
+  {
+    "NAME": "Read-Date",
+    "VALUE": 21
+  },
+  {
+    "NAME": "Size",
+    "VALUE": 22
+  },
+  {
+    "NAME": "Name",
+    "VERSION": "1.4",
+    "VALUE": 23
+  },
+  {
+    "NAME": "Filename",
+    "VERSION": "1.4",
+    "VALUE": 24
+  },
+  {
+    "NAME": "Start",
+    "VERSION": "1.4",
+    "VALUE": 25
+  },
+  {
+    "NAME": "Start-Info",
+    "VERSION": "1.4",
+    "VALUE": 26
+  },
+  {
+    "NAME": "Comment",
+    "VERSION": "1.4",
+    "VALUE": 27
+  },
+  {
+    "NAME": "Domain",
+    "VERSION": "1.4",
+    "VALUE": 28
+  },
+  {
+    "NAME": "Path",
+    "VERSION": "1.4",
+    "VALUE": 29
+  }
+]

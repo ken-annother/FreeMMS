@@ -1,0 +1,34 @@
+[
+  {
+    "NAME": "OK",
+    "VALUE": 128
+  },
+  {
+    "NAME": "Error-Unspecified",
+    "VALUE": 129
+  },
+  {
+    "NAME": "Error-Service-Denied",
+    "VALUE": 130
+  },
+  {
+    "NAME": "Error-Message-Format-Corrupt",
+    "VALUE": 131
+  },
+  {
+    "NAME": "Error-Sending-Address-Unresolved",
+    "VALUE": 132
+  },
+  {
+    "NAME": "Error-Network-Problem",
+    "VALUE": 134
+  },
+  {
+    "NAME": "Error-Content-Not-Accepted",
+    "VALUE": 135
+  },
+  {
+    "NAME": "Error-Unsupported-Message",
+    "VALUE": 136
+  }
+]
