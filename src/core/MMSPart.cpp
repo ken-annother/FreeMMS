@@ -2,7 +2,6 @@
 #include <spdlog/spdlog.h>
 
 #include <utility>
-#include <memory>
 
 using namespace std;
 using namespace spdlog;
@@ -11,7 +10,7 @@ MMSPart::MMSPart() : _data(nullptr), _dataLen(0) {
 }
 
 MMSPart::~MMSPart() {
-    delete _data;
+    delete[] _data;
 }
 
 void MMSPart::assignData(char *dat, long len) {

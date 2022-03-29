@@ -15,7 +15,7 @@ public:
 
     ~MMSInfo();
 
-    std::string toPlain();
+    std::string toPlain(bool includeBody);
 
     bool hasBody();
 

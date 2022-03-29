@@ -19,10 +19,12 @@ MMSInfo::~MMSInfo() {
     delete _body;
 }
 
-#define PART_SEPARATOR "----------------------------part"
 #define NLRF "\r\n"
+#define PART_SEPARATOR "----------------------------part"
+#define PART_SEPARATOR_END "----------------------------part--"
 
-std::string MMSInfo::toPlain() {
+
+std::string MMSInfo::toPlain(bool includeBody) {
     stringstream ss;
 
     for (auto &f: *_header) {
@@ -39,10 +41,14 @@ std::string MMSInfo::toPlain() {
                 ss << f.name.value << ": " << f.value.value << NLRF;
             }
             ss << "Content-Length: " << part->dataLen() << NLRF;
-            ss << NLRF;
+            if (includeBody) {
+                ss.write(part->data(), part->dataLen());
+                ss << NLRF;
+            }
         }
-    }
 
+        ss << PART_SEPARATOR_END;
+    }
 
     return ss.str();
 }

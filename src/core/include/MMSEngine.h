@@ -12,9 +12,14 @@ private:
 
 public:
     MMSEngine();
+    ~MMSEngine();
     explicit MMSEngine(std::string configDir);
 
     std::string convert2Plain(const std::string &mmsHexFilePath);
+    std::string convert2Plain(const std::string &mmsHexFilePath, bool withBinaryBody);
+    void convert2PlainFile(const std::string &mmsHexFilePath, const std::string &outFile);
+    void convert2PlainFile(const std::string &mmsHexFilePath, const std::string &outFile, bool withBinaryBody);
+    void convert2PlainDirectory(const std::string &mmsHexFilePath, const std::string &outDir);
 
     MMSHexData *convert2mmsHex(const std::string &mmsPlain);
 
