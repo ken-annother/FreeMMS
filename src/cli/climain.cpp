@@ -14,6 +14,7 @@ static inline void print_version(const char *exeName) {
 
 int decodeMMS(int argc, const char **argv) {
     char *optionDescStr = (char *) malloc(strlen(argv[0]) + strlen(" options") + 1);
+    memset(optionDescStr, 0, strlen(argv[0]) + strlen(" options") + 1);
     strcat(optionDescStr, argv[0]);
     strcat(optionDescStr, " options");
 

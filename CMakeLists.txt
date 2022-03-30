@@ -10,7 +10,7 @@ endmacro()
 include(cmake/components/freemms-core.cmake)
 include(cmake/components/freemms-cli.cmake)
 
-set(SPDLOG_BUILD_SHARED ON)
+set(SPDLOG_BUILD_SHARED OFF)
 add_subdirectory(3rdparty/spdlog)
 
 option(BUILD_TESTING "Build Tests" OFF)
