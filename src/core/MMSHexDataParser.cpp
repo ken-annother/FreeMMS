@@ -737,7 +737,7 @@ void MMSHexDataParser::parseHeader(MMSInfo &info) {
         f.name = {headerField, currentPos - 1, currentPos};
         f.value = parseHeaderFieldByType(headerField);
 
-        printf("code %d, name is : %s, value is : %s \n",
+        spdlog::debug("code {}, name is : {}, value is : {} \n",
                (unsigned char) headerFieldCode,
                headerField.c_str(),
                f.value.value.c_str());
@@ -753,7 +753,7 @@ void MMSHexDataParser::parseHeader(MMSInfo &info) {
 void MMSHexDataParser::parseBody(MMSInfo &info) {
     cursor c = {this->mmsHexData.data + currentPos, currentPos};
     int partNum = *c;
-    spdlog::info("parse body part count is {}", partNum);
+    spdlog::debug("parse body part count is {}", partNum);
     currentPos++;
 
     size_t len;

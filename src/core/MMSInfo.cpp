@@ -7,11 +7,9 @@
 using namespace std;
 
 MMSInfo::MMSInfo() : _header(new std::list<field>()), _body(new std::list<MMSPart *>) {
-    spdlog::info("MMSInfo construct ~");
 }
 
 MMSInfo::~MMSInfo() {
-    spdlog::info("MMSInfo deconstruct ~");
     delete _header;
     for (auto &part: *_body) {
         delete part;
