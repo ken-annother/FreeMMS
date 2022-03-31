@@ -44,6 +44,8 @@ target_link_libraries(plain2mms freemms_core)
 
 
 if (BUILD_TESTING)
+    add_subdirectory(3rdparty/googletest)
+
     include(CTest)
     enable_testing()
     add_subdirectory(test)

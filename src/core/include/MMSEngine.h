@@ -21,6 +21,7 @@ public:
     void convert2PlainFile(const std::string &mmsHexFilePath, const std::string &outFile, bool withBinaryBody);
     void convert2PlainDirectory(const std::string &mmsHexFilePath, const std::string &outDir);
 
+    void convert2mmsHex(const std::string &mmsPlain, const std::string &outputHexPath);
     MMSHexData *convert2mmsHex(const std::string &mmsPlain);
 
 };

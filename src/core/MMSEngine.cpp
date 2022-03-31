@@ -5,6 +5,7 @@
 #include <stdexcept>
 #include "spdlog/spdlog.h"
 #include "MMSHexDataParser.h"
+#include "MMSHexDataGenerator.h"
 #include "MMSInfo.h"
 
 using namespace std;
@@ -134,8 +135,31 @@ void MMSEngine::convert2PlainDirectory(const string &mmsHexFilePath, const strin
     delete mmsInfo;
 }
 
-MMSHexData *MMSEngine::convert2mmsHex(const std::string &mmsPlain) {
-    return nullptr;
+void MMSEngine::convert2mmsHex(const std::string &mmsPlain, const std::string &outputHexPath) {
+    spdlog::info("convert2mmsHex outputHexPath: {}", outputHexPath);
+    MMSHexData *result = convert2mmsHex(mmsPlain);
+    if (result != nullptr) {
+        ofstream outF(outputHexPath);
+        if (!outF.is_open()) {
+            spdlog::error("cannot write hex file {}", outputHexPath);
+            return;
+        }
+
+        outF.write(result->data, result->length);
+        outF.close();
+    }
+}
+
+MMSHexData *MMSEngine::convert2mmsHex(const string &mmsPlain) {
+    spdlog::info("convert2mmsHex mmsPlain: {}", mmsPlain);
+    ifstream mmsPlainFile(mmsPlain);
+    if (!mmsPlainFile.is_open()) {
+        spdlog::error("file not exist {}", mmsPlain);
+        return nullptr;
+    }
+
+    MMSHexDataGenerator dataGenerator(*metaDataManager, mmsPlain);
+    return dataGenerator.parse();
 }
 
 

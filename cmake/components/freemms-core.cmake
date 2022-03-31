@@ -16,4 +16,6 @@ set(FREEMMS_CORE_SOURCES
         ${FREEMMS_BASEDIR_CORE}/MMSMetaDataManager.cpp
         ${FREEMMS_BASEDIR_CORE}/MMSHexDataParser.h
         ${FREEMMS_BASEDIR_CORE}/MMSHexDataParser.cpp
+        ${FREEMMS_BASEDIR_CORE}/MMSHexDataGenerator.h
+        ${FREEMMS_BASEDIR_CORE}/MMSHexDataGenerator.cpp
         )

@@ -1,9 +1,3 @@
-include(FetchContent)
-FetchContent_Declare(
-        googletest
-        URL https://github.com/google/googletest/archive/refs/tags/release-1.11.0.zip
-)
-FetchContent_MakeAvailable(googletest)
 include(GoogleTest)
 
 message("UUU->" ${CMAKE_CURRENT_SOURCE_DIR})
