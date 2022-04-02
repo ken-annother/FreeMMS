@@ -3,9 +3,26 @@
 
 #include <limits>
 
-struct MMSHexData {
-    std::size_t length;
-    char* data;
+class MMSHexData {
+public:
+    MMSHexData(std::size_t length, char *data);
+
+    ~MMSHexData();
+
+public:
+    unsigned char getChar(std::size_t position);
+
+    std::size_t length() const {
+        return _length;
+    }
+
+    const char *data() const {
+        return _data;
+    }
+
+private:
+    std::size_t _length;
+    char *_data;
 };
 
 

@@ -12,6 +12,8 @@
 class MMSInfo {
 public:
     MMSInfo();
+    MMSInfo(const MMSInfo& info);
+    MMSInfo(MMSInfo&& info);
 
     ~MMSInfo();
 

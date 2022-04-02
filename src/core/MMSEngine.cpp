@@ -1,6 +1,7 @@
 #include "MMSEngine.h"
 #include <fstream>
 #include <utility>
+#include <memory>
 #include <boost/filesystem.hpp>
 #include <stdexcept>
 #include "spdlog/spdlog.h"
@@ -11,7 +12,8 @@
 using namespace std;
 using namespace boost;
 
-inline static MMSInfo *convertHexFile(MMSMetaDataManager &metaDataManager, const std::string &mmsHexFilePath) {
+inline static shared_ptr<MMSInfo>
+convertHexFile(MMSMetaDataManager &metaDataManager, const std::string &mmsHexFilePath) {
     ifstream mmsHexFile(mmsHexFilePath);
     if (!mmsHexFile.is_open()) {
         spdlog::error("file not exist {}", mmsHexFilePath);
@@ -25,14 +27,9 @@ inline static MMSInfo *convertHexFile(MMSMetaDataManager &metaDataManager, const
     mmsHexFile.read(buffer, len);
     mmsHexFile.close();
 
-    MMSHexData mmsHexData = MMSHexData();
-    mmsHexData.length = len;
-    mmsHexData.data = buffer;
-
+    MMSHexData mmsHexData = {static_cast<size_t>(len), buffer};
     MMSHexDataParser hexDataParser = MMSHexDataParser(metaDataManager, mmsHexData);
-    auto mmsInfo = new MMSInfo(hexDataParser.parse());
-    delete[] buffer;
-    return mmsInfo;
+    return make_shared<MMSInfo>(hexDataParser.parse());
 }
 
 MMSEngine::MMSEngine() {
@@ -63,9 +60,8 @@ void MMSEngine::initMMSMetaDataManager(std::string configDir) {
 
 
 std::string MMSEngine::convert2Plain(const std::string &mmsHexFilePath, bool withBinaryBody) {
-    MMSInfo *mmsInfo = convertHexFile(*metaDataManager, mmsHexFilePath);
+    auto mmsInfo = convertHexFile(*metaDataManager, mmsHexFilePath);
     string data = mmsInfo->toPlain(withBinaryBody);
-    delete mmsInfo;
     return data;
 }
 
@@ -102,7 +98,7 @@ inline static std::string getPartFileName(const std::list<field> &headInfo) {
 }
 
 void MMSEngine::convert2PlainDirectory(const string &mmsHexFilePath, const string &outDir) {
-    MMSInfo *mmsInfo = convertHexFile(*metaDataManager, mmsHexFilePath);
+    auto mmsInfo = convertHexFile(*metaDataManager, mmsHexFilePath);
     string data = mmsInfo->toPlain(false);
 
     if (!filesystem::exists(outDir)) {
@@ -131,8 +127,6 @@ void MMSEngine::convert2PlainDirectory(const string &mmsHexFilePath, const strin
             fP.close();
         }
     }
-
-    delete mmsInfo;
 }
 
 void MMSEngine::convert2mmsHex(const std::string &mmsPlain, const std::string &outputHexPath) {
@@ -145,7 +139,7 @@ void MMSEngine::convert2mmsHex(const std::string &mmsPlain, const std::string &o
             return;
         }
 
-        outF.write(result->data, result->length);
+        outF.write(result->data(), result->length());
         outF.close();
     }
 }

@@ -3,7 +3,7 @@
 
 #include <string>
 #include "MMSHexData.h"
-#include "../MMSMetaDataManager.h"
+#include "MMSMetaDataManager.h"
 
 class MMSEngine {
 private:

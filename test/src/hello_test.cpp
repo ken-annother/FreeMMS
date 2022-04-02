@@ -25,13 +25,13 @@ int test2() {
     return 1;
 }
 
-//// Demonstrate some basic assertions.
-//TEST(HelloTest, BasicAssertions) {
-//    int result = test();
-//    EXPECT_EQ(result, 1);
-//}
-
-TEST(HelloTest2, BasicAssertions2) {
-    int result = test2();
+// Demonstrate some basic assertions.
+TEST(HelloTest, BasicAssertions) {
+    int result = test();
     EXPECT_EQ(result, 1);
 }
+
+//TEST(HelloTest2, BasicAssertions2) {
+//    int result = test2();
+//    EXPECT_EQ(result, 1);
+//}

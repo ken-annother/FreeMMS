@@ -1,5 +1,4 @@
 #include "MMSInfo.h"
-#include <spdlog/spdlog.h>
 #include <list>
 #include <algorithm>
 #include <sstream>
@@ -9,11 +8,35 @@ using namespace std;
 MMSInfo::MMSInfo() : _header(new std::list<field>()), _body(new std::list<MMSPart *>) {
 }
 
+
+MMSInfo::MMSInfo(const MMSInfo &info) {
+    _header = new list<field>();
+    _header->assign(info._header->begin(), info._header->end());
+
+    _body = new list<MMSPart *>;
+    for (auto &part: *info._body) {
+        _body->push_back(new MMSPart(*part));
+    }
+    _body->assign(info._body->begin(), info._body->end());
+}
+
+MMSInfo::MMSInfo(MMSInfo &&info) {
+    _header = info._header;
+    _body = info._body;
+
+    info._header = nullptr;
+    info._body = nullptr;
+}
+
 MMSInfo::~MMSInfo() {
     delete _header;
-    for (auto &part: *_body) {
-        delete part;
+
+    if(_body != nullptr){
+        for (auto &part: *_body) {
+            delete part;
+        }
     }
+
     delete _body;
 }
 
