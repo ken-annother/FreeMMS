@@ -4,7 +4,7 @@
 #include <memory>
 #include <boost/filesystem.hpp>
 #include <stdexcept>
-#include "spdlog/spdlog.h"
+#include <spdlog/spdlog.h>
 #include "MMSHexDataParser.h"
 #include "MMSHexDataGenerator.h"
 #include "MMSInfo.h"
@@ -27,8 +27,10 @@ convertHexFile(MMSMetaDataManager &metaDataManager, const std::string &mmsHexFil
     mmsHexFile.read(buffer, len);
     mmsHexFile.close();
 
-    MMSHexData mmsHexData = {static_cast<size_t>(len), buffer};
-    MMSHexDataParser hexDataParser = MMSHexDataParser(metaDataManager, mmsHexData);
+    spdlog::info("convertHexFile TAG 1");
+    MMSHexDataParser hexDataParser = MMSHexDataParser(metaDataManager, {static_cast<size_t>(len), buffer});
+    spdlog::info("convertHexFile TAG 2");
+
     return make_shared<MMSInfo>(hexDataParser.parse());
 }
 
@@ -117,12 +119,12 @@ void MMSEngine::convert2PlainDirectory(const string &mmsHexFilePath, const strin
     fMain.close();
 
     for (auto &part: *mmsInfo->body()) {
-        string fileName = getPartFileName(part->header());
+        string fileName = getPartFileName(part.header());
         if (!fileName.empty()) {
             string ft = outDir;
             ft.append("/").append(fileName);
             ofstream fP(ft);
-            fP.write(part->data(), part->dataLen());
+            fP.write(part.data(), part.dataLen());
             fP.flush();
             fP.close();
         }

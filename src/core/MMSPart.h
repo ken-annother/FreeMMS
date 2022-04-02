@@ -10,11 +10,13 @@ private:
     char *_data;
     long _dataLen;
 public:
-    MMSPart();
+    MMSPart(std::list<field> header, char *dat, long len);
 
     MMSPart(const MMSPart &part);
 
     MMSPart(MMSPart &&part);
+
+    MMSPart &operator=(const MMSPart &part) noexcept;
 
     ~MMSPart();
 
@@ -25,10 +27,6 @@ public:
     long dataLen() const {
         return _dataLen;
     }
-
-    void assignData(char *data, long len);
-
-    void assignFields(std::list<field> fields);
 };
 
 #endif //FREEMMS_MMSPART_H

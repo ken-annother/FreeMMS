@@ -7,6 +7,12 @@ class MMSHexData {
 public:
     MMSHexData(std::size_t length, char *data);
 
+    MMSHexData(const MMSHexData &hexData);
+
+    MMSHexData(MMSHexData &&hexData);
+
+    MMSHexData &operator=(const MMSHexData &hexData);
+
     ~MMSHexData();
 
 public:

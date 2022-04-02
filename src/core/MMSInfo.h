@@ -13,7 +13,7 @@ class MMSInfo {
 public:
     MMSInfo();
     MMSInfo(const MMSInfo& info);
-    MMSInfo(MMSInfo&& info);
+    MMSInfo(MMSInfo&& info) noexcept ;
 
     ~MMSInfo();
 
@@ -25,15 +25,15 @@ public:
         _header->push_back(f);
     }
 
-    void addPart(MMSPart *part);
+    void addPart(const MMSPart &part);
 
     std::list<field> *header() const;
 
-    std::list<MMSPart *> *body() const;
+    std::list<MMSPart> *body() const;
 
 private:
     std::list<field> *_header;
-    std::list<MMSPart *> *_body;
+    std::list<MMSPart> *_body;
 
 };
 

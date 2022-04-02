@@ -236,7 +236,7 @@ static long readIntegerValue(const cursor &c, size_t &len) {
  *
  * @return 整数类型
  */
-static std::string readWellKnowCharset(MMSMetaDataManager &metaDataManager, const cursor& c, size_t &len) {
+static std::string readWellKnowCharset(MMSMetaDataManager &metaDataManager, const cursor &c, size_t &len) {
     auto markV = *c;
     if (markV == 128) {
         return "Auto";
@@ -253,7 +253,7 @@ static std::string readWellKnowCharset(MMSMetaDataManager &metaDataManager, cons
  *
  * @return 整数或者字符串类型
  */
-static std::string readCharset(MMSMetaDataManager &metaDataManager, const cursor& c, size_t &len) {
+static std::string readCharset(MMSMetaDataManager &metaDataManager, const cursor &c, size_t &len) {
     auto markV = *c;
     if (markV > 30 && markV < 128) {
         return readTextString(c, len);
@@ -279,7 +279,7 @@ static std::string readCharset(MMSMetaDataManager &metaDataManager, const cursor
  *+
  * @return
  */
-static std::string readEncodedStringValue(MMSMetaDataManager &metaDataManager, const cursor& c, size_t &len) {
+static std::string readEncodedStringValue(MMSMetaDataManager &metaDataManager, const cursor &c, size_t &len) {
     auto markV = *c;
     if (markV > 31) {
         return readTextString(c, len);
@@ -389,7 +389,7 @@ static string readQuotedString(const cursor &c, size_t &len) {
  *
  * @return
  */
-static string readNoValue(const cursor& c, size_t &len) {
+static string readNoValue(const cursor &c, size_t &len) {
     auto markV = *c;
     if (markV != 0) {
         spdlog::warn("read no value error, start {}, end {}", c.offset(), c.offset() + 1);
@@ -622,7 +622,7 @@ static string readTypedParameter(MMSMetaDataManager &metaDataManager, const curs
  *
  * @return
  */
-static string readParameter(MMSMetaDataManager &metaDataManager, const cursor& c, size_t &len) {
+static string readParameter(MMSMetaDataManager &metaDataManager, const cursor &c, size_t &len) {
     auto markV = *c;
     if (markV > 31 && markV < 128) {
         return readUntypedParameter(c, len);
@@ -740,9 +740,9 @@ void MMSHexDataParser::parseHeader(MMSInfo &info) {
         f.value = parseHeaderFieldByType(headerField);
 
         spdlog::info("code {}, name is : {}, value is : {} \n",
-                      (unsigned char) headerFieldCode,
-                      headerField.c_str(),
-                      f.value.value.c_str());
+                     (unsigned char) headerFieldCode,
+                     headerField.c_str(),
+                     f.value.value.c_str());
 
         info.addHeaderField(f);
 
@@ -761,13 +761,12 @@ void MMSHexDataParser::parseBody(MMSInfo &info) {
     size_t len;
     for (int i = partNum; i > 0; i--) {
         info.addPart(parsePart({mmsHexData, currentPos}, len));
+        spdlog::info("MMSHexDataParser::parseBody TAG 1");
         currentPos += len;
     }
 }
 
-MMSPart *MMSHexDataParser::parsePart(const cursor &c, size_t &len) {
-    auto mmsPart = new MMSPart();
-
+MMSPart MMSHexDataParser::parsePart(const cursor &c, size_t &len) {
     size_t partHeaderLenUsedSize;
     size_t partHeaderLen = readUIntVarInteger(c, partHeaderLenUsedSize);
 
@@ -782,11 +781,9 @@ MMSPart *MMSHexDataParser::parsePart(const cursor &c, size_t &len) {
 
     char *data = new char[partDataLen];
     memcpy(data, c.offset(partHeaderLenUsedSize + parDataLenUsedSize + partHeaderLen).data(), partDataLen);
-    mmsPart->assignData(data, partDataLen);
-    mmsPart->assignFields(headerFields);
 
     len = partHeaderLenUsedSize + parDataLenUsedSize + partHeaderLen + partDataLen;
-    return mmsPart;
+    return {headerFields, data, partDataLen};
 }
 
 
@@ -855,7 +852,7 @@ MMSV<std::string> MMSHexDataParser::parseHeaderFieldByType(const std::string &fi
  *
  * @return
  */
-std::string MMSHexDataParser::parseHeaderOfXMmsMessageType(const cursor& c, size_t &len) {
+std::string MMSHexDataParser::parseHeaderOfXMmsMessageType(const cursor &c, size_t &len) {
     len = 1;
     return metaDataManager.findMessageTypeNameByCode(*c);
 }
@@ -871,7 +868,7 @@ std::string MMSHexDataParser::parseHeaderOfXMmsMessageType(const cursor& c, size
  *
  * @return
  */
-std::string MMSHexDataParser::parseHeaderOfXMmsMMSVersion(const cursor& c, size_t &len) {
+std::string MMSHexDataParser::parseHeaderOfXMmsMMSVersion(const cursor &c, size_t &len) {
     int number = readShortInteger(c, len);
     return std::to_string(number / 0x10) + "." + std::to_string(number % 0x10);
 }
@@ -890,7 +887,7 @@ std::string MMSHexDataParser::parseHeaderOfXMmsMMSVersion(const cursor& c, size_
  *
  * @return
  */
-std::string MMSHexDataParser::parseHeaderOfXMmsMessageClass(const cursor& c, size_t &len) {
+std::string MMSHexDataParser::parseHeaderOfXMmsMessageClass(const cursor &c, size_t &len) {
     auto markV = *c;
     if (markV > 127) {
         len = 1;
@@ -910,7 +907,7 @@ std::string MMSHexDataParser::parseHeaderOfXMmsMessageClass(const cursor& c, siz
  *
  * @return
  */
-std::string MMSHexDataParser::parseHeaderOfXMmsPriority(const cursor& c, size_t &len) {
+std::string MMSHexDataParser::parseHeaderOfXMmsPriority(const cursor &c, size_t &len) {
     len = 1;
     return metaDataManager.findPriorityByCode(*c);
 }
@@ -924,7 +921,7 @@ std::string MMSHexDataParser::parseHeaderOfXMmsPriority(const cursor& c, size_t 
  *
  * @return
  */
-std::string MMSHexDataParser::parseHeaderOfXMmsDeliveryReport(const cursor& c, size_t &len) {
+std::string MMSHexDataParser::parseHeaderOfXMmsDeliveryReport(const cursor &c, size_t &len) {
     len = 1;
     return metaDataManager.findDeliveryReportByCode(*c);
 }
@@ -938,7 +935,7 @@ std::string MMSHexDataParser::parseHeaderOfXMmsDeliveryReport(const cursor& c, s
  *
  * @return
  */
-std::string MMSHexDataParser::parseHeaderOfXMmsReadReply(const cursor& c, size_t &len) {
+std::string MMSHexDataParser::parseHeaderOfXMmsReadReply(const cursor &c, size_t &len) {
     len = 1;
     return metaDataManager.findReadReplyByCode(*c);
 }
@@ -950,7 +947,7 @@ std::string MMSHexDataParser::parseHeaderOfXMmsReadReply(const cursor& c, size_t
  *
  * @return
  */
-std::string MMSHexDataParser::parseHeaderOfXMmsTransactionId(const cursor& c, size_t &len) {
+std::string MMSHexDataParser::parseHeaderOfXMmsTransactionId(const cursor &c, size_t &len) {
     return readTextString(c, len);
 }
 
@@ -962,7 +959,7 @@ std::string MMSHexDataParser::parseHeaderOfXMmsTransactionId(const cursor& c, si
  *
  * @return
  */
-std::string MMSHexDataParser::parseHeaderOfMessageId(const cursor& c, size_t &len) {
+std::string MMSHexDataParser::parseHeaderOfMessageId(const cursor &c, size_t &len) {
     return readTextString(c, len);
 }
 
@@ -974,7 +971,7 @@ std::string MMSHexDataParser::parseHeaderOfMessageId(const cursor& c, size_t &le
  *
  * @return
  */
-std::string MMSHexDataParser::parseHeaderOfDate(const cursor& c, size_t &len) {
+std::string MMSHexDataParser::parseHeaderOfDate(const cursor &c, size_t &len) {
     long data = readDateValue(c, len);
     return to_string(data);
 }
@@ -987,7 +984,7 @@ std::string MMSHexDataParser::parseHeaderOfDate(const cursor& c, size_t &len) {
  *
  * @return
  */
-std::string MMSHexDataParser::parseHeaderOfTo(const cursor& c, size_t &len) {
+std::string MMSHexDataParser::parseHeaderOfTo(const cursor &c, size_t &len) {
     return readEncodedStringValue(metaDataManager, c, len);
 }
 
@@ -1001,7 +998,7 @@ std::string MMSHexDataParser::parseHeaderOfTo(const cursor& c, size_t &len) {
  *
  * @return
  */
-std::string MMSHexDataParser::parseHeaderOfFrom(const cursor& c, size_t &len) {
+std::string MMSHexDataParser::parseHeaderOfFrom(const cursor &c, size_t &len) {
     size_t vLen;
     long vl = readValueLength(c, vLen);
     cursor ac = c.offset(ptrdiff_t(vLen));
@@ -1027,7 +1024,7 @@ std::string MMSHexDataParser::parseHeaderOfFrom(const cursor& c, size_t &len) {
  *
  * @return
  */
-std::string MMSHexDataParser::parseHeaderOfCc(const cursor& c, size_t &len) {
+std::string MMSHexDataParser::parseHeaderOfCc(const cursor &c, size_t &len) {
     return readEncodedStringValue(metaDataManager, c, len);
 }
 
@@ -1039,12 +1036,12 @@ std::string MMSHexDataParser::parseHeaderOfCc(const cursor& c, size_t &len) {
  *
  * @return
  */
-std::string MMSHexDataParser::parseHeaderOfSubject(const cursor& c, size_t &len) {
+std::string MMSHexDataParser::parseHeaderOfSubject(const cursor &c, size_t &len) {
     return readEncodedStringValue(metaDataManager, c, len);
 }
 
 
-std::string MMSHexDataParser::parseHeaderOfContentType(const cursor& c, size_t &len) {
+std::string MMSHexDataParser::parseHeaderOfContentType(const cursor &c, size_t &len) {
     return readContentType(metaDataManager, c, len);
 }
 
@@ -1055,7 +1052,7 @@ std::string MMSHexDataParser::parseHeaderOfContentType(const cursor& c, size_t &
  *
  * @return
  */
-std::string MMSHexDataParser::parseHeaderOfXMmsContentLocation(const cursor& c, size_t &len) {
+std::string MMSHexDataParser::parseHeaderOfXMmsContentLocation(const cursor &c, size_t &len) {
     return readUriValue(c, len);
 }
 
@@ -1070,7 +1067,7 @@ std::string MMSHexDataParser::parseHeaderOfXMmsContentLocation(const cursor& c, 
  *
  * @return
  */
-std::string MMSHexDataParser::parseHeaderOfXMmsMMSExpiry(const cursor& c, size_t &len) {
+std::string MMSHexDataParser::parseHeaderOfXMmsMMSExpiry(const cursor &c, size_t &len) {
     size_t vl;
     long vll = readValueLength(c, vl);
 
@@ -1103,12 +1100,12 @@ std::string MMSHexDataParser::parseHeaderOfXMmsMMSExpiry(const cursor& c, size_t
  *
  * @return
  */
-std::string MMSHexDataParser::parseHeaderOfXMmsMMSMessageSize(const cursor& c, size_t &len) {
+std::string MMSHexDataParser::parseHeaderOfXMmsMMSMessageSize(const cursor &c, size_t &len) {
     return to_string(readLongInteger(c, len));
 }
 
 std::list<field>
-MMSHexDataParser::parsePartHeaders(MMSMetaDataManager &mmsMetaDataManager, const cursor& c, const size_t &contentLen) {
+MMSHexDataParser::parsePartHeaders(MMSMetaDataManager &mmsMetaDataManager, const cursor &c, const size_t &contentLen) {
     list<field> fields;
 
     field f;

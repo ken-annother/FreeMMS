@@ -2,14 +2,16 @@
 #define FREEMMS_MMSHEXDATAPARSER_H
 
 #include <MMSHexData.h>
+
+#include <utility>
 #include "MMSMetaDataManager.h"
 #include "MMSParserCursor.h"
 #include "MMSInfo.h"
 
 class MMSHexDataParser {
 public:
-    MMSHexDataParser(MMSMetaDataManager &metaDataManager, MMSHexData &mmsHexData) : metaDataManager(metaDataManager),
-                                                                                    mmsHexData(mmsHexData),
+    MMSHexDataParser(MMSMetaDataManager &metaDataManager, MMSHexData mmsHexData) : metaDataManager(metaDataManager),
+                                                                                    mmsHexData(std::move(mmsHexData)),
                                                                                     currentPos(0) {}
 
 private:
@@ -51,7 +53,7 @@ private:
 
     static std::string parseHeaderOfXMmsMMSMessageSize(const cursor &c, size_t &len);
 
-    MMSPart *parsePart(const cursor &c, size_t &len);
+    MMSPart parsePart(const cursor &c, size_t &len);
 
     std::list<field>
     parsePartHeaders(MMSMetaDataManager &mmsMetaDataManager, const cursor &c, const size_t &contentLen);
@@ -63,7 +65,7 @@ public:
 
 private:
     MMSMetaDataManager &metaDataManager;
-    MMSHexData &mmsHexData;
+    MMSHexData mmsHexData;
     size_t currentPos;
 };
 
