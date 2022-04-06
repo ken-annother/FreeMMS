@@ -739,7 +739,7 @@ void MMSHexDataParser::parseHeader(MMSInfo &info) {
         f.name = {headerField, currentPos - 1, currentPos};
         f.value = parseHeaderFieldByType(headerField);
 
-        spdlog::info("code {}, name is : {}, value is : {} \n",
+        spdlog::debug("code {}, name is : {}, value is : {} \n",
                      (unsigned char) headerFieldCode,
                      headerField.c_str(),
                      f.value.value.c_str());
@@ -761,7 +761,7 @@ void MMSHexDataParser::parseBody(MMSInfo &info) {
     size_t len;
     for (int i = partNum; i > 0; i--) {
         info.addPart(parsePart({mmsHexData, currentPos}, len));
-        spdlog::info("MMSHexDataParser::parseBody TAG 1");
+        spdlog::debug("MMSHexDataParser::parseBody TAG 1");
         currentPos += len;
     }
 }

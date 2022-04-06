@@ -8,9 +8,9 @@
 template<typename T>
 struct Field {
     MMSV<std::string> name;
-    T value;
+    MMSV<T> value;
 };
 
-typedef Field<MMSV<std::string>> field;
+typedef Field<std::string> field;
 
 #endif //FREEMMS_FIELD_H

@@ -17,7 +17,7 @@ public:
     mms_hex_data parse();
 
 private:
-    MMSInfo* readFromPlainFile();
+    mms_info readFromPlainFile();
 };
 
 

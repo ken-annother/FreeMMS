@@ -4,6 +4,7 @@
 #include <fstream>
 #include <iostream>
 #include <spdlog/spdlog.h>
+#include "MMSResourceFetcher.h"
 
 typedef MMSInfo *pInfo;
 typedef pInfo pMMSInfo;
@@ -41,7 +42,7 @@ static std::istream &safe_get_line(std::istream &is, std::string &t) {
     }
 }
 
-static vector<string> split(const string& s, const string& delimiter) {
+static vector<string> split(const string &s, const string &delimiter) {
     size_t pos_start = 0, pos_end, delim_len = delimiter.length();
     string token;
     vector<string> res;
@@ -55,7 +56,7 @@ static vector<string> split(const string& s, const string& delimiter) {
     return res;
 }
 
-static vector<string> split(const string& s, const string& delimiter, int max) {
+static vector<string> split(const string &s, const string &delimiter, int max) {
     size_t pos_start = 0, pos_end, delim_len = delimiter.length();
     string token;
     vector<string> res;
@@ -78,11 +79,11 @@ MMSHexDataGenerator::MMSHexDataGenerator(MMSMetaDataManager &metaDataManager,
 
 mms_hex_data MMSHexDataGenerator::parse() {
     auto info = readFromPlainFile();
-    return nullptr;
+    return info->toHex();
 }
 
 
-inline static void readHeader(MMSInfo &info, ifstream &steam) {
+inline static void readHeader(const MMSInfo &info, ifstream &steam) {
     string s;
     while (safe_get_line(steam, s)) {
         if (s.empty()) {
@@ -100,24 +101,64 @@ inline static void readHeader(MMSInfo &info, ifstream &steam) {
     }
 }
 
-inline static void readBody(MMSInfo &info, ifstream &steam) {
+
+inline static void readBody(MMSInfo &info, ifstream &stream) {
     string s;
-    while (getline(steam, s)) {
-        auto arr = split(s, ": ", 2);
-        if (arr.size() == 2) {
-            cout << ">>>: " << arr[0] << "|||" << arr[1] << endl;
+    std::list<field> header;
+
+    string contentLocation;
+    char *dat = nullptr;
+    size_t len = 0;
+
+    MMSResourceFetcher fetcher;
+
+    while (safe_get_line(stream, s)) {
+        if (s == PART_SEPARATOR || s == PART_SEPARATOR_END) {
+            if (dat == nullptr && contentLocation.length() > 0) { //说明是分离式的
+                fetcher.fetch(contentLocation, &dat, len);
+            }
+
+            if (!header.empty() && len > 0) {
+                info.addPart({header, dat, len});
+            }
+
+            header = {};
+            len = 0;
+            dat = nullptr;
+
+            if (s == PART_SEPARATOR_END) {
+                break;
+            }
+        } else {
+            auto arr = split(s, ": ", 2);
+            if (arr.size() == 2) {
+                cout << ">>>: " << arr[0] << "|||" << arr[1] << endl;
+
+                field f;
+                f.name = {arr[0], 0, 0};
+                f.value = {arr[1], 0, 0};
+
+                if (arr[0] == "Content-Length") {
+                    len = atoi(arr[1].c_str());
+                    dat = new char[len];
+                    stream.read(dat, len);
+                } else if (arr[0] == "Content-Location") {
+                    contentLocation = arr[1];
+                }
+                header.push_back(f);
+            }
         }
     }
 }
 
-MMSInfo *MMSHexDataGenerator::readFromPlainFile() {
+mms_info MMSHexDataGenerator::readFromPlainFile() {
     ifstream ifs(_mmsPlain);
     if (!ifs.is_open()) {
         spdlog::error("cannot open file {}", _mmsPlain);
         return nullptr;
     }
 
-    auto info = new MMSInfo();
+    auto info = std::make_shared<MMSInfo>();
     readHeader(*info, ifs);
     if (info->hasBody()) {
         readBody(*info, ifs);

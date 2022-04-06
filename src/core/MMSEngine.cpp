@@ -27,9 +27,7 @@ convertHexFile(MMSMetaDataManager &metaDataManager, const std::string &mmsHexFil
     mmsHexFile.read(buffer, static_cast<streamsize>(len));
     mmsHexFile.close();
 
-    spdlog::info("convertHexFile TAG 1");
     MMSHexDataParser hexDataParser = MMSHexDataParser(metaDataManager, {len, buffer});
-    spdlog::info("convertHexFile TAG 2");
 
     return make_shared<MMSInfo>(hexDataParser.parse());
 }

@@ -30,10 +30,6 @@ MMSInfo::~MMSInfo() {
     delete _body;
 }
 
-#define NLRF "\r\n"
-#define PART_SEPARATOR "----------------------------part"
-#define PART_SEPARATOR_END "----------------------------part--"
-
 
 std::string MMSInfo::toPlain(bool includeBody) {
     stringstream ss;
@@ -51,7 +47,11 @@ std::string MMSInfo::toPlain(bool includeBody) {
             for (auto &f: part.header()) {
                 ss << f.name.value << ": " << f.value.value << NLRF;
             }
-            ss << "Content-Length: " << part.dataLen() << NLRF;
+
+            if (includeBody) {
+                ss << "Content-Length: " << part.dataLen() << NLRF;
+            }
+
             if (includeBody) {
                 ss.write(part.data(), part.dataLen());
                 ss << NLRF;
@@ -72,9 +72,9 @@ bool MMSInfo::hasBody() {
 }
 
 void MMSInfo::addPart(const MMSPart &part) {
-    spdlog::info("MMSInfo::addPart, part[{}]", (void *) &part);
+    spdlog::debug("MMSInfo::addPart, part[{}]", (void *) &part);
     this->_body->push_back(part);
-    spdlog::info("MMSInfo::addPart, -----------");
+    spdlog::debug("MMSInfo::addPart, -----------");
 }
 
 std::list<field> *MMSInfo::header() const {
@@ -83,4 +83,8 @@ std::list<field> *MMSInfo::header() const {
 
 std::list<MMSPart> *MMSInfo::body() const {
     return _body;
+}
+
+mms_hex_data MMSInfo::toHex() {
+    return nullptr;
 }

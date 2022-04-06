@@ -4,19 +4,15 @@
 using namespace spdlog;
 
 MMSHexData::MMSHexData(std::size_t length, char *data) : _length(length), _data(data) {
-    spdlog::info("MMSHexData[{}] construct", (void *) this);
 }
 
 MMSHexData::MMSHexData(const MMSHexData &hexData) {
     _data = new char[hexData._length];
     memcpy(_data, hexData._data, hexData._length);
     _length = hexData._length;
-
-    spdlog::info("MMSHexData[{}] copy construct", (void *) this);
 }
 
 MMSHexData::MMSHexData(MMSHexData &&hexData)  noexcept {
-    spdlog::info("MMSHexData[{}] move construct form {}", (void *) this, (void *) &hexData);
     _data = hexData._data;
     _length = hexData._length;
 
@@ -36,7 +32,6 @@ MMSHexData &MMSHexData::operator=(const MMSHexData &hexData) {
 
 
 MMSHexData::~MMSHexData() {
-    spdlog::info("~MMSHexData [{}]; data address {}", (void *) this, (void *) _data);
     delete[] _data;
 }
 

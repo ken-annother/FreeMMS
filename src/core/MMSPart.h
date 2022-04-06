@@ -8,9 +8,9 @@ class MMSPart {
 private:
     std::list<field> _header;
     char *_data;
-    long _dataLen;
+    size_t _dataLen;
 public:
-    MMSPart(std::list<field> header, char *dat, long len);
+    MMSPart(std::list<field> header, char *dat, size_t len);
 
     MMSPart(const MMSPart &part);
 
@@ -24,7 +24,7 @@ public:
 
     const char *data();
 
-    long dataLen() const {
+    size_t dataLen() const {
         return _dataLen;
     }
 };

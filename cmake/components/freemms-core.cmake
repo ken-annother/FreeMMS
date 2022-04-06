@@ -19,4 +19,6 @@ set(FREEMMS_CORE_SOURCES
         ${FREEMMS_BASEDIR_CORE}/MMSHexDataParser.cpp
         ${FREEMMS_BASEDIR_CORE}/MMSHexDataGenerator.h
         ${FREEMMS_BASEDIR_CORE}/MMSHexDataGenerator.cpp
+        ${FREEMMS_BASEDIR_CORE}/MMSResourceFetcher.h
+        ${FREEMMS_BASEDIR_CORE}/MMSResourceFetcher.cpp
         )
