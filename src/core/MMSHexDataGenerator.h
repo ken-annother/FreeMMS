@@ -14,7 +14,7 @@ private:
     MMSMetaDataManager &_metaDataManager;
     std::string _mmsPlain;
 public:
-    MMSHexData *parse();
+    mms_hex_data parse();
 
 private:
     MMSInfo* readFromPlainFile();

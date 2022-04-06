@@ -2,6 +2,7 @@
 #define FREEMMS_MMSHEXDATA_H
 
 #include <limits>
+#include <memory>
 
 class MMSHexData {
 public:
@@ -9,7 +10,7 @@ public:
 
     MMSHexData(const MMSHexData &hexData);
 
-    MMSHexData(MMSHexData &&hexData);
+    MMSHexData(MMSHexData &&hexData) noexcept;
 
     MMSHexData &operator=(const MMSHexData &hexData);
 
@@ -30,6 +31,8 @@ private:
     std::size_t _length;
     char *_data;
 };
+
+typedef std::shared_ptr<MMSHexData> mms_hex_data;
 
 
 #endif //FREEMMS_MMSHEXDATA_H

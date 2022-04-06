@@ -22,7 +22,7 @@ public:
     void convert2PlainDirectory(const std::string &mmsHexFilePath, const std::string &outDir);
 
     void convert2mmsHex(const std::string &mmsPlain, const std::string &outputHexPath);
-    MMSHexData *convert2mmsHex(const std::string &mmsPlain);
+    mms_hex_data convert2mmsHex(const std::string &mmsPlain);
 
 };
 

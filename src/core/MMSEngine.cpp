@@ -12,7 +12,7 @@
 using namespace std;
 using namespace boost;
 
-inline static shared_ptr<MMSInfo>
+inline static mms_info
 convertHexFile(MMSMetaDataManager &metaDataManager, const std::string &mmsHexFilePath) {
     ifstream mmsHexFile(mmsHexFilePath);
     if (!mmsHexFile.is_open()) {
@@ -21,14 +21,14 @@ convertHexFile(MMSMetaDataManager &metaDataManager, const std::string &mmsHexFil
     }
 
     mmsHexFile.seekg(0, ios::end);
-    streamsize len = mmsHexFile.tellg();
+    size_t len = mmsHexFile.tellg();
     char *buffer = new char[len];
     mmsHexFile.seekg(0, ios::beg);
-    mmsHexFile.read(buffer, len);
+    mmsHexFile.read(buffer, static_cast<streamsize>(len));
     mmsHexFile.close();
 
     spdlog::info("convertHexFile TAG 1");
-    MMSHexDataParser hexDataParser = MMSHexDataParser(metaDataManager, {static_cast<size_t>(len), buffer});
+    MMSHexDataParser hexDataParser = MMSHexDataParser(metaDataManager, {len, buffer});
     spdlog::info("convertHexFile TAG 2");
 
     return make_shared<MMSInfo>(hexDataParser.parse());
@@ -133,7 +133,7 @@ void MMSEngine::convert2PlainDirectory(const string &mmsHexFilePath, const strin
 
 void MMSEngine::convert2mmsHex(const std::string &mmsPlain, const std::string &outputHexPath) {
     spdlog::info("convert2mmsHex outputHexPath: {}", outputHexPath);
-    MMSHexData *result = convert2mmsHex(mmsPlain);
+    auto result = convert2mmsHex(mmsPlain);
     if (result != nullptr) {
         ofstream outF(outputHexPath);
         if (!outF.is_open()) {
@@ -141,12 +141,12 @@ void MMSEngine::convert2mmsHex(const std::string &mmsPlain, const std::string &o
             return;
         }
 
-        outF.write(result->data(), result->length());
+        outF.write(result->data(), static_cast<streamsize>(result->length()));
         outF.close();
     }
 }
 
-MMSHexData *MMSEngine::convert2mmsHex(const string &mmsPlain) {
+mms_hex_data MMSEngine::convert2mmsHex(const string &mmsPlain) {
     spdlog::info("convert2mmsHex mmsPlain: {}", mmsPlain);
     ifstream mmsPlainFile(mmsPlain);
     if (!mmsPlainFile.is_open()) {

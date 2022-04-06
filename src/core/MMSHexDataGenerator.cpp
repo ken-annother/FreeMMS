@@ -41,7 +41,7 @@ static std::istream &safe_get_line(std::istream &is, std::string &t) {
     }
 }
 
-static vector<string> split(string s, string delimiter) {
+static vector<string> split(const string& s, const string& delimiter) {
     size_t pos_start = 0, pos_end, delim_len = delimiter.length();
     string token;
     vector<string> res;
@@ -55,7 +55,7 @@ static vector<string> split(string s, string delimiter) {
     return res;
 }
 
-static vector<string> split(string s, string delimiter, int max) {
+static vector<string> split(const string& s, const string& delimiter, int max) {
     size_t pos_start = 0, pos_end, delim_len = delimiter.length();
     string token;
     vector<string> res;
@@ -76,7 +76,7 @@ MMSHexDataGenerator::MMSHexDataGenerator(MMSMetaDataManager &metaDataManager,
 }
 
 
-MMSHexData *MMSHexDataGenerator::parse() {
+mms_hex_data MMSHexDataGenerator::parse() {
     auto info = readFromPlainFile();
     return nullptr;
 }

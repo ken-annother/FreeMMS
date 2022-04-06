@@ -15,7 +15,7 @@ MMSHexData::MMSHexData(const MMSHexData &hexData) {
     spdlog::info("MMSHexData[{}] copy construct", (void *) this);
 }
 
-MMSHexData::MMSHexData(MMSHexData &&hexData) {
+MMSHexData::MMSHexData(MMSHexData &&hexData)  noexcept {
     spdlog::info("MMSHexData[{}] move construct form {}", (void *) this, (void *) &hexData);
     _data = hexData._data;
     _length = hexData._length;

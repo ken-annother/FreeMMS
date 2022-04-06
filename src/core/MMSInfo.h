@@ -3,6 +3,7 @@
 
 #include <list>
 #include <string>
+#include <memory>
 #include <spdlog/spdlog.h>
 
 #include "MMSV.h"
@@ -12,8 +13,10 @@
 class MMSInfo {
 public:
     MMSInfo();
-    MMSInfo(const MMSInfo& info);
-    MMSInfo(MMSInfo&& info) noexcept ;
+
+    MMSInfo(const MMSInfo &info);
+
+    MMSInfo(MMSInfo &&info) noexcept;
 
     ~MMSInfo();
 
@@ -36,5 +39,7 @@ private:
     std::list<MMSPart> *_body;
 
 };
+
+typedef std::shared_ptr<MMSInfo> mms_info;
 
 #endif //FREEMMS_MMSINFO_H
